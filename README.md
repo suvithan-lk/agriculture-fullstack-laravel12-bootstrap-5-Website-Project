@@ -63,7 +63,7 @@ The system is built on Laravel 12 for back-end logic and Bootstrap 5 for front-e
 - **Deployment:** Apache 
 
 ---
-
+```
 ## 📂 Folder Structure
 ```
 
@@ -83,16 +83,15 @@ project-root/
 ├── .env.example         # Example environment variables
 └── README.md
 
-````
 
----
 
+```
 ## ⚙️ Installation
 1. **Clone the repository**
    ```bash
    git clone https://github.com/suvithan-lk/agriculture-fullstack-laravel12-bootstrap-5-Website-Project.git
    cd agriculture-fullstack-laravel12-bootstrap-5-Website-Project
-````
+```
 
 2. **Install dependencies**
 
