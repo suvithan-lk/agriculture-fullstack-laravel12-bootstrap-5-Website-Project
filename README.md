@@ -1,61 +1,227 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+```markdown
+# 🚜 Agriculture Management System
 
-## About Laravel
+A **full-stack web application** built with **Laravel 12** (PHP Framework) and **Bootstrap 5** for responsive, modern UI.  
+This system is designed to manage agricultural products, services, farmer marketplace, and customer interactions efficiently.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📖 Table of Contents
+1. [About the Project](#about-the-project)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Folder Structure](#folder-structure)
+5. [Installation](#installation)
+6. [Environment Variables](#environment-variables)
+7. [Usage](#usage)
+8. [Database Migrations & Seeding](#database-migrations--seeding)
+9. [Testing](#testing)
+10. [Deployment](#deployment)
+11. [License](#license)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📌 About the Project
+This **Agriculture Management System** allows:
+- Managing products (seeds, fertilizers, tools, irrigation systems).
+- Providing agricultural services (advisory, soil testing, logistics).
+- Farmer-to-buyer marketplace integration.
+- Blog/news publishing for agricultural tips.
+- Role-based authentication (Admin, Farmer, Buyer).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The system is built on Laravel 12 for back-end logic and Bootstrap 5 for front-end design, ensuring responsive layouts and smooth UI.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## ✨ Features
+- **Authentication & Authorization**
+  - Laravel Breeze / Laravel UI-based auth.
+  - Role-based access (Admin, Farmer, Buyer).
+- **Product Management**
+  - CRUD for agricultural products.
+  - Image upload & category management.
+- **Services Module**
+  - Service booking with request forms.
+- **Marketplace**
+  - Listings with search & filters.
+- **Blog Module**
+  - Create, edit, delete blog posts.
+- **Responsive Design**
+  - Bootstrap 5 grid & components.
+- **REST API Endpoints**
+  - JSON-based product & service API.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🛠 Tech Stack
+- **Backend:** Laravel 12 (PHP 8+)
+- **Frontend:** Blade Templates + Bootstrap 5 + Font Awesome
+- **Database:** MySQL
+- **Authentication:** Laravel UI
+- **Version Control:** Git & GitHub
+- **Deployment:** Apache 
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 📂 Folder Structure
+```
 
-## Contributing
+project-root/
+├── app/                # Laravel application logic
+├── bootstrap/          # Laravel bootstrap files
+├── config/             # Config files
+├── database/           # Migrations, seeders, factories
+├── public/              # Public assets (CSS, JS, images)
+├── resources/
+│   ├── views/           # Blade templates
+│   ├── css/             # Custom CSS (Bootstrap overrides)
+│   ├── js/              # JavaScript files
+├── routes/              # Web & API routes
+├── storage/             # Storage for uploads, cache, logs
+├── tests/               # PHPUnit & feature tests
+├── .env.example         # Example environment variables
+└── README.md
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+````
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## ⚙️ Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/suvithan-lk/agriculture-fullstack-laravel12-bootstrap-5-Website-Project.git
+   cd agriculture-fullstack-laravel12-bootstrap-5-Website-Project
+````
 
-## Security Vulnerabilities
+2. **Install dependencies**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   ```bash
+   composer install
+   npm install && npm run dev
+   ```
 
-## License
+3. **Create `.env` file**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   ```bash
+   cp .env.example .env
+   ```
+
+4. **Generate application key**
+
+   ```bash
+   php artisan key:generate
+   ```
+
+5. **Set up database**
+   Update `.env` file with your database credentials.
+
+6. **Run migrations**
+
+   ```bash
+   php artisan migrate
+   ```
+
+7. **Seed database** (optional)
+
+   ```bash
+   php artisan db:seed
+   ```
+
+8. **Run the application**
+
+   ```bash
+   php artisan serve
+   ```
+
+---
+
+## 🌱 Environment Variables
+
+Example `.env`:
+
+```env
+APP_NAME="agriculture-fullstack-laravel12-bootstrap-5-Website-Project"
+APP_ENV=local
+APP_KEY=base64:xxxxxx
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=agriculture_db
+DB_USERNAME=root
+DB_PASSWORD=
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.example.com
+MAIL_PORT=587
+MAIL_USERNAME=you@example.com
+MAIL_PASSWORD=yourpassword
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=you@example.com
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+---
+
+## ▶️ Usage
+
+* **Admin Dashboard**: Manage products, services, marketplace, and blog posts.
+* **Farmer Portal**: List products, view service requests, check orders.
+* **Buyer Portal**: Browse products, purchase, request services.
+* **Public Site**: View products, read blogs, contact support.
+
+---
+
+## 🗄 Database Migrations & Seeding
+
+* Run all migrations:
+
+  ```bash
+  php artisan migrate
+  ```
+* Seed with demo data:
+
+  ```bash
+  php artisan db:seed
+  ```
+
+---
+
+## 🧪 Testing
+
+Run feature & unit tests:
+
+```bash
+php artisan test
+```
+
+---
+
+## 🚀 Deployment
+
+1. Set `APP_ENV=production` in `.env`.
+2. Run:
+
+   ```bash
+   composer install --optimize-autoloader --no-dev
+   php artisan config:cache
+   php artisan route:cache
+   php artisan view:cache
+   ```
+3. Set correct file permissions for `storage` and `bootstrap/cache`.
+4. Configure web server to point to `public/` directory.
+
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+```
+
+## Author
+	=> A.Suvithan
+	=> suvithan.lk@gmail.com
